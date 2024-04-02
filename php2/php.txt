@@ -1,0 +1,120 @@
+<?php
+
+echo '<html><body>';
+echo 'Лабораторна робота №1<br>';
+echo 'Варіант 11 <br>';
+echo 'Обчислення значення виразу <br>';
+$a = 3;
+$b = 21;
+$m = 3.27;
+$D = ($m * log($m) + $a * sin($a * $m) / $b * cos($b));
+echo "Отримані результати a = $a x = $b m = $m D = $D<br>";  
+
+echo '</html>';  
+
+?>  
+
+<html>  
+
+<head>  
+
+  <title>Лабораторна робота 1</title>  
+
+</head>  
+
+<body>  
+
+<h2>Лабораторна робота №1</h2>  
+
+<h3>Завдання 2</h3>  
+
+<?php
+function reverseDigits($n)
+{
+    $reversed = 0;
+    while ($n > 0) {
+        $digit = $n % 10; // Отримуємо останню цифру числа
+        $reversed = $reversed * 10 + $digit; // Додаємо цифру до результуючого числа
+        $n = (int) ($n / 10); // Видаляємо останню цифру з числа $n
+    }
+    return $reversed;
+}
+
+// Приклад використання
+$n = 12345;
+$reversed = reverseDigits($n);
+echo "Число $n після зміни порядку цифр: $reversed";
+?>
+  
+
+</body>  
+
+</html> 
+
+<html>  
+
+<head>  
+
+  <title>Лабораторна робота 1</title>   
+
+</head>  
+
+<body>  
+
+<h2>Лабораторна робота №1</h2>  
+
+<h3>Завдання 3</h3>  
+ <?php
+ function findAverage($array)
+ {
+     $sum = array_sum($array); // Обчислюємо суму всіх елементів масиву
+     $count = count($array); // Кількість елементів у масиві
+     if ($count > 0) {
+         $average = $sum / $count; // Знаходимо середнє арифметичне
+         return $average;
+     } else {
+         return 0; // Якщо масив порожній, середнє арифметичне буде 0
+     }
+ }
+
+ // Приклад використання
+ $array = [2, 4, 6, 8, 10];
+ $average = findAverage($array);
+ echo "Середнє арифметичне масиву: $average";
+ ?>
+
+</body>  
+
+</html>
+
+<html>  
+
+<head>  
+
+  <title>Лабораторна робота 1</title>   
+
+</head>  
+
+<body>  
+
+<h2>Лабораторна робота №1</h2>  
+
+<h3>Завдання 4</h3>  
+    <?php
+    $L = []; // Створюємо масив
+    
+    // Заповнюємо масив значеннями від 2 до 20
+    for ($i = 2; $i <= 20; $i++) {
+        $L[] = $i;
+    }
+
+    // Обчислюємо середнє арифметичне
+    $average = array_sum($L) / count($L);
+
+    echo "Середнє арифметичне елементів масиву L(2,20): $average";
+    ?>
+
+
+</body>  
+
+</html>
